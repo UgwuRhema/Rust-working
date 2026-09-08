@@ -1,4 +1,4 @@
-fn add(mut u64 a, mut u64 b) -> u64
+fn add(mut a: u64, mut b: u64) -> u64
 {
 
 }
