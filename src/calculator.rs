@@ -6,8 +6,8 @@ fn main()
     let mut num_a: String = String::new();
     let mut num_b: String = String::new(); //since stdio only reads into owned Strings...
     //the acytual variables...
-    let num1: u64;
-    let num2: u64;
+    let num1: i64;
+    let num2: i64;
     println!("Welcome to Calculator!");
 
     print!("Enter first number: ");
@@ -30,7 +30,7 @@ fn main()
    let opt: char = op.trim().chars().next().expect("Please enter a valid operator!");
 
     //this is genuinely absurd, what even is this? is this how absurd a C and C++ dev sees Rust?
-    let result: u64 = match opt {
+    let result: i64 = match opt {
         '+' => num1 + num2,
         '-' => num1 - num2,
         '*' => num1 * num2,
