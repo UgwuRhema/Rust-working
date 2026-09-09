@@ -1,4 +1,4 @@
-use std::io; //like stdio.h, for input and (i'm not sure)output...
+use std::io::{self, Write}; //like stdio.h, for input and (i'm not sure)output...
 
 fn main() {
     //two types of strings, string slice...(just like const char *)
@@ -20,7 +20,10 @@ fn main() {
     //so let's say i want to read a name...
     let mut name: String = String::new();
     print!("Enter your name: ");
-    io::stdin().read_line(&mut name).expect("Failed to read line").trim();
 
-    println!("Hello, {}!", name);
+    //equivalent to fflush(stdout); it seems Rust has the same method
+    io::stdout().flush().expect("Failed to flush stdout");
+    io::stdin().read_line(&mut name).expect("Failed to read line");
+
+    println!("Hello, {}!", name.trim());
 }
