@@ -29,5 +29,24 @@ fn main()
    io::stdin().read_line(&mut op).unwrap();
    let opt: char = op.trim().chars().next().expect("Please enter a valid operator!");
 
+    //this is genuinely absurd, what even is this? is this how absurd a C and C++ dev sees Rust?
+    let result: u64 = match opt {
+        '+' => num1 + num2,
+        '-' => num1 - num2,
+        '*' => num1 * num2,
+        '/' => {
+            if num2 == 0.0 {
+                println!("Error; division by zero!");
+                return;
+            }
+            num1 / num2
+        }
+        //ohh this like "default:"
+        _ => {
+            println!("Error: Unknown operator '{}'", opt);
+            return;
+        }
+    };
 
+    println!("The result is {}", result);
 }
