@@ -21,5 +21,13 @@ fn main()
     io::stdin().read_line(&mut num_b).expect("Failed to Read into num_b");
     num2 = num_b.trim().parse().expect("Please type a valid number!");
 
-    
+   //i just grasped how to get chars so time for the operator...
+   let mut op: String = String::new();
+   print!("Enter an operator: ");
+   io::stdout().flush().expect("...");
+   //nahh this is genuinely frying me...
+   io::stdin().read_line(&mut op).unwrap();
+   let opt: char = op.trim().chars().next().expect("Please enter a valid operator!");
+
+
 }
