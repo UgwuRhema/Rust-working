@@ -12,13 +12,14 @@ fn main() {
     let arr: [u64; 5] = [34, 45, 12, 21, 90];
 
     //this acts like a pointer in a way, if you get what I'm saying
-    let slice: &[u64] = &arr[1..3];
+    let slice: &[u64] = &arr[1..3]; //get's 64 bit integers from index 1 - 3 and stores them into
+                                    //an array slice
 
     println!("First element in array: {}", arr[0]);
     println!("The whole array is {:?}", arr);
 
     //so let's say i want to read a name...
-    let mut name: String = String::new();
+    let mut name: String = String::new(); //note, io::stdin can only read into String variables...
     print!("Enter your name: ");
 
     //equivalent to fflush(stdout); it seems Rust has the same method
