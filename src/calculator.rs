@@ -35,7 +35,7 @@ fn main()
         '-' => num1 - num2,
         '*' => num1 * num2,
         '/' => {
-            if num2 == 0.0 {
+            if num2 == 0 {
                 println!("Error; division by zero!");
                 return;
             }
