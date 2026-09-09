@@ -1,3 +1,5 @@
+use std::io; //like stdio.h, for input and (i'm not sure)output...
+
 fn main() {
     //two types of strings, string slice...(just like const char *)
     let string1: &str = "Nigger!";
@@ -13,4 +15,12 @@ fn main() {
     let slice: &[u64] = &arr[1..3];
 
     println!("First element in array: {}", arr[0]);
+    println!("The whole array is {:?}", arr);
+
+    //so let's say i want to read a name...
+    let mut name: String = String::new();
+    print!("Enter your name: ");
+    io::stdin().read_line(&mut name).expect("Failed to read line").trim();
+
+    println!("Hello, {}!", name);
 }
