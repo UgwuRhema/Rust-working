@@ -27,4 +27,23 @@ fn main() {
     io::stdin().read_line(&mut name).expect("Failed to read line");
 
     println!("Hello, {}!", name.trim());
+
+    //we are gonna test structs and their impl blocks, let's see how they differ from C...
+    struct Human
+    {
+        name: String,
+        age: u32,
+    }
+
+    //i can't lie this 'impl' block is good, but i still prefer C++ classes over this no offense
+    impl Human
+    {
+        fn new(name: &str, age: u32) -> Self{
+            Self {name: name.to_string(), age}
+        }
+
+    }
+
+    let h1 = Human::new("Rhema", 17);
+    print!("Name: {}", h1.name);
 }
