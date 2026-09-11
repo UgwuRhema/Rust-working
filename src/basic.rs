@@ -49,7 +49,7 @@ fn main() {
     people.push(Human::new("Rhema", 17));
     people.push(Human::new("Boss", 17));
 
-    for i in 0..=2 {
+    for i in 0..2 {
         println!("Name: {}, Age: {}", people[i].name, people[i].age);
     }
 }
