@@ -1,5 +1,19 @@
 use std::io::{self, Write}; //like stdio.h, for input and (i'm not sure)output...
 
+struct Human
+{
+    name: String,
+    age: u32,
+}
+
+//i can't lie this 'impl' block is good, but i still prefer C++ classes over this no offense
+impl Human
+{
+    fn new(name: &str, age: u32) -> Self{
+        Self {name: name.to_string(), age}
+    }
+}
+
 fn main() {
     //two types of strings, string slice...(just like const char *)
     let string1: &str = "Nigger!";
@@ -29,21 +43,13 @@ fn main() {
     println!("Hello, {}!", name.trim());
 
     //we are gonna test structs and their impl blocks, let's see how they differ from C...
-    struct Human
-    {
-        name: String,
-        age: u32,
+
+    //in my opinion this is better than C++ vectors but not C's mallocs and reallocs
+    let mut people: Vec<Human> = Vec::new();
+    people.push(Human::new("Rhema", 17));
+    people.push(Human::new("Boss", 17));
+
+    for i in 0..=2 {
+        println!("Name: {people[i].name}, Age: {people[i].age}");
     }
-
-    //i can't lie this 'impl' block is good, but i still prefer C++ classes over this no offense
-    impl Human
-    {
-        fn new(name: &str, age: u32) -> Self{
-            Self {name: name.to_string(), age}
-        }
-
-    }
-
-    let h1 = Human::new("Rhema", 17);
-    print!("Name: {}", h1.name);
 }
