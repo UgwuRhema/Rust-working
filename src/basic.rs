@@ -50,6 +50,6 @@ fn main() {
     people.push(Human::new("Boss", 17));
 
     for i in 0..=2 {
-        println!("Name: {people[i].name}, Age: {people[i].age}");
+        println!("Name: {}, Age: {}", people[i].name, people[i].age);
     }
 }
