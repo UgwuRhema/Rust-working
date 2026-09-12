@@ -38,5 +38,5 @@ fn main()
     let mut age_str: String = String::new();
     io::stdout().flush().expect("Failed to flush 2");
     io::stdin().read_line(&mut age_str).expect("Failed to read age_str");
-    let mut age: u32 = age_str.parse().expect("Enter a valid age value");
+    let mut age: u32 = age_str.trim().parse().expect("Enter a valid age value");
 }
