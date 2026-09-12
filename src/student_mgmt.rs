@@ -31,7 +31,7 @@ fn main()
     //student vector...
     let mut students: Vec<Student> = Vec::new();
     print!("Enter Student name: ");
-    let mut name: = String = String::new();
+    let mut name: String = String::new();
     io::stdout().flush().expect("Failed to flush");
     io::stdin().read_line(&mut name).expect("Failed to read into name");
     print!("Enter your age: ");
