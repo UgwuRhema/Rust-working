@@ -9,10 +9,10 @@ struct Student
 
 impl Student
 {
-    fn new(n: &str, a: u32, i: u32) -> Self
+    fn new(n: String, a: u32, i: u32) -> Self
     {
         Self {
-            name: n.to_string(),
+            name: n,
             age: a,
             id: i
         }
@@ -20,7 +20,7 @@ impl Student
 
     fn print_stud(&self)
     {
-        println!("Name: {}", self.name);
+        println!("Name: {}", self.name.trim());
         println!("Age: {}", self.age);
         println!("Id: {}", self.id);
     }
@@ -34,4 +34,5 @@ fn main()
     let mut name: = String = String::new();
     io::stdout().flush().expect("Failed to flush");
     io::stdin().read_line(&mut name).expect("Failed to read into name");
+    
 }
