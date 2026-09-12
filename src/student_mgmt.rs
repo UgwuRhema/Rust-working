@@ -33,7 +33,7 @@ fn main()
     let student1: Student = Student::new("Ugwu Rhema", 17, 1);
     let student2: Student = Student::new("Phat Nickher", 16, 2);
     let student3: Student = Student::new("Balls Kennedy", 17, 3);
-    Students.push_back(student1);
-    Students.push_back(student2);
-    Students.push_back(student3);
+    Students.push(student1);
+    Students.push(student2);
+    Students.push(student3);
 }
