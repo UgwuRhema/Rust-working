@@ -28,5 +28,12 @@ impl Student
 
 fn main()
 {
-    let Students: Vec<Student> = Vec::new();
+    //just checking out somethings first...
+    let mut Students: Vec<Student> = Vec::new();
+    let student1: Student = Student::new("Ugwu Rhema", 17, 1);
+    let student2: Student = Student::new("Phat Nickher", 16, 2);
+    let student3: Student = Student::new("Balls Kennedy", 17, 3);
+    Students.push_back(student1);
+    Students.push_back(student2);
+    Students.push_back(student3);
 }
