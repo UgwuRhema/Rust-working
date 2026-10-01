@@ -1,8 +1,20 @@
+//simple macro from a page...
 macro_rules! give_six
 {
     () => {
         6
     };
+}
+
+macro_rules! new_macro
+{
+    (name: String) => {
+        name
+    };
+
+    (text: &str) => {
+        print!("{}", text);
+    }
 }
 
 fn main()
