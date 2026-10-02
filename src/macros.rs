@@ -14,7 +14,7 @@ macro_rules! new_macro
     };
 
     ($text:expr) => {
-        print!("{}", $text);
+        println!("{}", $text);
     };
 }
 
@@ -24,6 +24,6 @@ fn main()
     println!("The value: {}", a_value);
 
     /* let's try to use new_macro */
-    let name = new_macro!(String::from("Nigger"));
-    print!("{}", name);
+    let name = new_macro!("hello".to_string());
+    println!("the text = {}", name);
 }
