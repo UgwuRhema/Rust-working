@@ -9,12 +9,12 @@ macro_rules! give_six
 /* it seems macros can perform more than one tasks */
 macro_rules! new_macro
 {
-//    (name: String) => {
-  //      name
-  //  };
+    ($name:expr) => {
+        $name
+    };
 
-    (text: &str) => {
-        print!("{}", text);
+    ($text:expr) => {
+        print!("{}", $text);
     };
 }
 
@@ -24,5 +24,6 @@ fn main()
     println!("The value: {}", a_value);
 
     /* let's try to use new_macro */
-    new_macro!("Nigger");
+    let name = new_macro!(String::from("Nigger"));
+    print!("{}", name);
 }
