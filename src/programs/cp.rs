@@ -1,8 +1,9 @@
 use std::io::{self, Write};
-use std::fs;
+use std::fs::File;
 
-fn main()
+fn main() -> std::io::Result<()>
 {
     let filename = "file.txt";
-    print!("File: {}", filename);
+    println!("File: {}", filename);
+    Ok(())
 }
